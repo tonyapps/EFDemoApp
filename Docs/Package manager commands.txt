@@ -1,0 +1,37 @@
+Each package is licensed to you by its owner. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages. Some packages may include dependencies which are governed by additional licenses. Follow the package source (feed) URL to determine any dependencies.
+
+Package Manager Console Host Version 2.8.50313.46
+
+Type 'get-help NuGet' to see all available NuGet commands.
+
+PM> Enable-Migrations
+Checking if the context targets an existing database...
+Detected database created with a database initializer. Scaffolded migration '201511211538212_InitialCreate' corresponding to existing database. To use an automatic migration instead, delete the Migrations folder and re-run Enable-Migrations specifying the -EnableAutomaticMigrations parameter.
+Code First Migrations enabled for project EFDemo.
+PM> Enable - Migrations -EnableAutomaticMigration
+The term 'Enable' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was
+ included, verify that the path is correct and try again.
+At line:1 char:7
++ Enable <<<<  - Migrations -EnableAutomaticMigration
+    + CategoryInfo          : ObjectNotFound: (Enable:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PM> Enable - Migrations -ContextTypeName EFDemo.Models.MusicStoreDbContext -EnableAutomaticMigration
+The term 'Enable' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was
+ included, verify that the path is correct and try again.
+At line:1 char:7
++ Enable <<<<  - Migrations -ContextTypeName EFDemo.Models.MusicStoreDbContext -EnableAutomaticMigration
+    + CategoryInfo          : ObjectNotFound: (Enable:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PM> Enable-Migrations -EnableAutomaticMigration
+Checking if the context targets an existing database...
+Code First Migrations enabled for project EFDemo.
+PM> Update-database -script
+No pending explicit migrations.
+Applying automatic migration: 201511211843072_AutomaticMigration.
+Automatic migration was not applied because it would result in data loss. Set AutomaticMigrationDataLossAllowed to 'true' on your DbMigrationsConfiguration to allow application of automatic migrations even if they might cause data loss. Alternately, use Update-Database with the '-Force' option, or scaffold an explicit migration.
+PM> Update-database -script -Force
+No pending explicit migrations.
+Applying automatic migration: 201511211843225_AutomaticMigration.
+PM> 
